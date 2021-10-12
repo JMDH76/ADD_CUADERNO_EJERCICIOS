@@ -11,9 +11,9 @@ import java.util.List;
 
 public class Ejercicio04 {
 	
-	static String enunciado = "04. Crear una modificación del programa número 2 para que lea el resultado que ha escrito el \r\n"
-			+ "programa 3 y lo muestre por pantalla. Deberá implementar algún procedimiento para \r\n"
-			+ "controlar que el fichero esté efectivamente escrito y su contenido disponible.\n";	
+	static String enunciado = "04. Crear una modificaciÃ³n del programa nÃºmero 2 para que lea el resultado que ha escrito el \r\n"
+			+ "programa 3 y lo muestre por pantalla. DeberÃ¡ implementar algÃºn procedimiento para \r\n"
+			+ "controlar que el fichero estÃ© efectivamente escrito y su contenido disponible.\n";	
 	
 	
 	static final int NUM_PROCESOS = 4;
@@ -73,7 +73,7 @@ public class Ejercicio04 {
 
 		} catch (IOException e) {
 
-			System.out.println(nombreFichero + " está vacío.");
+			System.out.println(nombreFichero + " estÃ¡ vacÃ­o.");
 		}
 		return suma;
 	}
