@@ -1,3 +1,5 @@
+//Sumador para el ejemplo hecho en el video de teoría.
+
 package es.florida.cuaderno02;
 
 public class Sumador_EJ04 {

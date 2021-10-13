@@ -1,3 +1,5 @@
+//Ejemplo del video de teoria.
+
 package es.florida.cuaderno02;
 
 import java.io.BufferedReader;
