@@ -18,7 +18,7 @@ public class Ejercicio01 {
 
 	/*
 	 * Metodo sumar() 
-	 * FUNCIONAMIENTO: suma mediante un bucle todos los valores desde el valor 
+	 * ACTION: suma mediante un bucle todos los valores desde el valor 
 	 * más pequeño del intervalo al mayor. 	 
  	 * INPUT: enteros con los valoresdel intervalo. 
 	 * OUTPUT: entero con el valor de la suma

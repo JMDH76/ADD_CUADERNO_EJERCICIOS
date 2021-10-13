@@ -16,7 +16,7 @@ public class Sumador_EJ04 {
 		/*
 		 * Metodo sumar() 
 		 * FUNCIONAMIENTO: suma mediante un bucle todos los valores desde el valor 
-		 * m·s pequeÒo del intervalo al mayor. 	 
+		 * m√°s peque√±o del intervalo al mayor. 	 
 	 	 * INPUT: enteros con los valoresdel intervalo. 
 		 * OUTPUT: entero con el valor de la suma
 		 */
