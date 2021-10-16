@@ -9,9 +9,9 @@ import java.util.ArrayList;
 
 public class Ejercicio05 {
 	
-	static String enunciado = "04. Crear una modificación del programa número 2 para que lea el resultado que ha escrito el \r\n"
-			+ "    programa 3 y lo muestre por pantalla. Deberá implementar algún procedimiento para \r\n"
-			+ "    controlar que el fichero esté efectivamente escrito y su contenido disponible.\n";	
+	static String enunciado = "05. Implementar una modificación del programa número 4 para que llame dos veces \r\n"
+			+ "    consecutivas al programa 3 (con números distintos), lea los resultados de los ficheros \r\n"
+			+ "    generados y los muestre por pantalla\n";	
 	
 	static final int NUM_PROCESOS = 2;
 	static final String PREFIJO_FICHEROS = "fichero";

@@ -6,9 +6,9 @@ import java.util.ArrayList;
 
 public class Ejercicio07 {
 		
-		static String enunciado = "06. Crea una ampliación del programa 2 para que redirija la salida de la ejecución del programa 1\r\n"
-				+ "    a su flujo de ejecución y lo muestre por consola (pista: utilizar inheritIO).\n";	
-		
+		static String enunciado = "07. Crear otra ampliación del programa 2 para que redirija la salida de la \r\n"
+				+ "    ejecución del programa 1 a su flujo de ejecución y lo escriba en un fichero "
+				+ "(pista: utilizar redirectOutput).\n";	
 		
 		/*
 		 * Metodo lanzarSumador() 
@@ -51,7 +51,6 @@ public class Ejercicio07 {
 		public static void main(String[] args) {
 
 			System.out.println(enunciado);
-			
 			int n1 = 1;
 			int n2 = 405;
 			String ficherosalida = "salida.txt";

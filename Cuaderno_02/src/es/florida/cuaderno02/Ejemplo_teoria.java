@@ -14,12 +14,6 @@ import java.io.BufferedReader;
 
 public class Ejemplo_teoria {
 
-
-		static String enunciado = "04. Crear una modificación del programa número 2 para que lea el resultado que ha escrito el \r\n"
-				+ "programa 3 y lo muestre por pantalla. Deberá implementar algún procedimiento para \r\n"
-				+ "controlar que el fichero esté efectivamente escrito y su contenido disponible.\n";	
-		
-		
 		static final int NUM_PROCESOS = 4;
 		static final String PREFIJO_FICHEROS = "fichero";
 		static final int NUM_INICIO = 100;

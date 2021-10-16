@@ -2,13 +2,11 @@ package es.florida.cuaderno02;
 
 	import java.io.File;
 	import java.util.ArrayList;
-	
 
 public class Ejercicio06 {
 		
-		static String enunciado = "06. Crea una ampliación del programa 2 para que redirija la salida de la ejecución del programa 1\r\n"
-				+ "    a su flujo de ejecución y lo muestre por consola (pista: utilizar inheritIO).\n";	
-		
+		static String enunciado = "06. Crea una ampliación del programa 2 para que redirija la salida de la ejecución \r\n"
+				+ "    del programa 1 a su flujo de ejecución y lo muestre por consola (pista: utilizar inheritIO).\n";	
 		
 		/*
 		 * Metodo lanzarSumador() 
@@ -37,7 +35,7 @@ public class Ejercicio06 {
 
 				ProcessBuilder builder = new ProcessBuilder(command);	
 				
-				builder.inheritIO().start();  //Para que la salida se presente dentro de la clase Ejercicio06 en vez de por le Ejercicio01
+				builder.inheritIO().start();  //Para que la salida se presente dentro de la clase Ejercicio06
 
 			} catch (Exception e) {
 				e.printStackTrace();
