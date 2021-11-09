@@ -14,6 +14,7 @@ package es.florida.cuaderno03.Ejercicio06;
 public class ControlSemaforos{
 
 	boolean control = true;
+	int tiempoVerde = 3000;
 
 	public void encenderSemaforo1() throws InterruptedException {
 		while (true) {
@@ -21,10 +22,10 @@ public class ControlSemaforos{
 				while(control != true) {
 					wait();
 				}
-				System.out.println("El semaforo 1 está en verde");
+				System.out.println("El semáforo 1 está en verde");
 				control = false;
 				notify();
-				Thread.sleep(3000);
+				Thread.sleep(tiempoVerde);
 			}
 		}
 	}
@@ -35,10 +36,10 @@ public class ControlSemaforos{
 				while(control == true) {
 					wait();
 				}
-				System.out.println("El semaforo 2 está en verde");
+				System.out.println("El semáforo 2 está en verde");
 				control = true;
 				notify();
-				Thread.sleep(3000);
+				Thread.sleep(tiempoVerde);
 			}
 		}
 	}
@@ -54,7 +55,6 @@ public class ControlSemaforos{
 				try {
 					cs.encenderSemaforo1();
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -67,7 +67,6 @@ public class ControlSemaforos{
 				try {
 					cs.encenderSemaforo2();
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}

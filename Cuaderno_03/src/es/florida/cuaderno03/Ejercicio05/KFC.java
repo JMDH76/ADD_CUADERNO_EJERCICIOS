@@ -24,7 +24,7 @@ public class KFC implements Runnable{
 			t.start();
 			
 			try {
-				Thread.sleep(100); // ponemos un retardo para poder verlo por consola
+				Thread.sleep(200); // ponemos un retardo para poder verlo por consola
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -33,7 +33,7 @@ public class KFC implements Runnable{
 		System.out.println("Han sobrado " + alitasDisponibles + " alitas");
 	}
 
-	
+	//public void consumirAlitas(String nombre, int alitas){
 	synchronized public void consumirAlitas(String nombre, int alitas){
 		if(alitas <= alitasDisponibles) {
 			alitasDisponibles -= alitas;

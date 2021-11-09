@@ -7,6 +7,7 @@ package es.florida.cuaderno03.Ejercicio03;
 
 public class Caracol implements Runnable{
 	
+	double distancia = 1;
 	String nombre;
 	double velocidad;
 	
@@ -14,17 +15,16 @@ public class Caracol implements Runnable{
 		this.nombre = nombre;
 		this.velocidad = velocidad;
 	}
-	
-	
-	
 
+	
 	public static void main(String[] args) {
 		
 		int caracoles = 5;
 		Caracol caracol;
+		double[] velocidad = {0.01, 0.011, 0.0099, 0.00999, 0.0105};
 		
-		for (int i = 1; i<=caracoles; i++) {
-			caracol = new Caracol (("Caracol_" + i), generarAleatorio());
+		for (int i = 1; i <= caracoles; i++) {
+			caracol = new Caracol(("Caracol_" + i), velocidad[i - 1]);
 			Thread hilo = new Thread(caracol);
 			hilo.start();
 		}
@@ -32,39 +32,24 @@ public class Caracol implements Runnable{
 	}
 
 	
-	public static double generarAleatorio() {
-		double min = 0.2;
-		double max = 0.4;
-		double aleatorio = Math.random()*(min - max + 0.1) + max;
-		System.out.println("Numero aleatorio: " + aleatorio);
-		return aleatorio;
-	}
-	
-	
-	
 	@Override
 	public void run() {
-		
-		double distancia;
-		long inicial = System.currentTimeMillis();
-		boolean flag = true;
-		double progreso;
-		
-		while (flag) {
-			long intermedio = System.currentTimeMillis();
-			double tiempo = (intermedio - inicial)/1000;
-			distancia = velocidad * (tiempo);
-			if (distancia <= 1) {
-				progreso = distancia / 0.01; 	
-			} else {
-				progreso = 100;
-				flag = false;
-			}
-			System.out.println(nombre + " --> " + String.format("%.0f", progreso) + "%");
-		}
-		long tfinal = System.currentTimeMillis();
-		long tiempocarrera =  (tfinal - inicial) / 1000 ;
-		System.out.println("El " + nombre + " ha finalizado la carrera con un tiempo de " + tiempocarrera + "seg");
-	}
 
+		double avance = 0;
+		double porcentaje = 0;
+
+		while (avance < distancia) {
+			avance += velocidad * 1;
+			porcentaje = 100 * avance / distancia;
+			System.out.println(nombre + " --> " + String.format("%.0f", porcentaje) + "%");
+			try {
+				Thread.sleep(50);
+			} catch (InterruptedException e) {
+				
+				e.printStackTrace();
+			}
+		}
+		System.out.println("El " + nombre + " ha finalizado la carrera ");
+	}
 }
+
