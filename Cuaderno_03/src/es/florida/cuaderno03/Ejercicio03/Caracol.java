@@ -28,7 +28,6 @@ public class Caracol implements Runnable{
 			Thread hilo = new Thread(caracol);
 			hilo.start();
 		}
-
 	}
 
 	

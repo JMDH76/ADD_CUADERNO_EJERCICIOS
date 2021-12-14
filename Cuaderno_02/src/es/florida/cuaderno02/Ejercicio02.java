@@ -14,7 +14,7 @@ public class Ejercicio02 {
 	 * ACTION:	construye la llamada que vamos a pasar al processBuilder y la muestra por pantalla. Crea
 	 * e inicia el processBuilder. Pasa a la clase Ejercicio01 los parámetros. Controla las posibles excepciones.
  	 * INPUT: 	valores del intervalo a sumar (Integer).
-	 * OUTPUT: 	devuelve por pantalla elcomando ("command") que pasa a processBuilder y su versión para en cmd de Windows.
+	 * OUTPUT: 	devuelve por pantalla el comando ("command") que pasa a processBuilder y su versión para en cmd de Windows.
 	 */
 	public static void lanzarSumador(Integer n1, Integer n2) {
 			

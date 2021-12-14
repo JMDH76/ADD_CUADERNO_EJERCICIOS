@@ -22,7 +22,7 @@ public class ControlSemaforos{
 				while(control != true) {
 					wait();
 				}
-				System.out.println("El semáforo 1 está en verde");
+				System.out.println("El semáforo 1 está en verde  -->  Semáforo 2 está en rojo");
 				control = false;
 				notify();
 				Thread.sleep(tiempoVerde);
@@ -36,7 +36,7 @@ public class ControlSemaforos{
 				while(control == true) {
 					wait();
 				}
-				System.out.println("El semáforo 2 está en verde");
+				System.out.println("El semáforo 2 está en verde  -->  Semáforo 1 está en rojo");
 				control = true;
 				notify();
 				Thread.sleep(tiempoVerde);
@@ -71,12 +71,7 @@ public class ControlSemaforos{
 				}
 			}
 		});
-		
 		t1.start();
 		t2.start();
-
 	}
-
-	
-
 }

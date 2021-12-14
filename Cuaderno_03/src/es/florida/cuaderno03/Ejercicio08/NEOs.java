@@ -10,9 +10,13 @@ import java.util.ArrayList;
 
 public class NEOs implements Runnable {
 
+	static String fichero = "src\\es\\florida\\cuaderno03\\Ejercicio08\\NEOs.txt";
+	static String directorioSalida = "src\\es\\florida\\cuaderno03\\Ejercicio08\\FicherosNEOs\\";
+	static ArrayList<Long> tiempomedioproceso = new ArrayList<Long>();
+	
+	
 	String nombreNEO;
 	double velNEO, posNEO;
-	
 	
 	public NEOs (String nombreNEO, double velNEO, double posNEO) {
 		
@@ -20,11 +24,6 @@ public class NEOs implements Runnable {
 		this.velNEO = velNEO;
 		this.posNEO = posNEO;
 	}
-	
-	static String fichero = "src\\es\\florida\\cuaderno03\\Ejercicio08\\NEOs.txt";
-	static String directorioSalida = "src\\es\\florida\\cuaderno03\\Ejercicio08\\FicherosNEOs\\";
-	static ArrayList<Long> tiempomedioproceso = new ArrayList<Long>();
-	
 	
 	
 	public static void main(String[] args) {
@@ -47,8 +46,7 @@ public class NEOs implements Runnable {
 				double velNEO = Double.parseDouble(linea.substring(index2 + 1));
 
 				linea = br.readLine();
-				NEOs neo;
-				neo = new NEOs(nombreNEO, posNEO, velNEO);
+				NEOs neo = new NEOs(nombreNEO, posNEO, velNEO);
 				Thread t = new Thread(neo);
 				t.start();
 			}

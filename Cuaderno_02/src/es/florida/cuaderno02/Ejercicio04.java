@@ -13,6 +13,7 @@ public class Ejercicio04 {
 			+ "    programa 3 y lo muestre por pantalla. Deberá implementar algún procedimiento para \r\n"
 			+ "    controlar que el fichero esté efectivamente escrito y su contenido disponible.\n";	
 	
+	
 	/*
 	 * Metodo lanzarSumador() 
 	 * ACTION:	construye la llamada que vamos a pasar al processBuilder. Crea e inicia el 
@@ -75,7 +76,7 @@ public class Ejercicio04 {
 		
 		int n1 = 1;
 		int n2 = 10;
-		String nombrefichero = "resultado.txt";
+		String nombrefichero = "resultado25.txt";
 	
 		lanzarSumador(n1, n2, nombrefichero);
 	}

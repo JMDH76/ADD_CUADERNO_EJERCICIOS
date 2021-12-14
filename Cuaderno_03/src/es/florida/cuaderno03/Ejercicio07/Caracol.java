@@ -11,17 +11,17 @@ import java.io.IOException;
 
 public class Caracol implements Runnable{
 	
+	static String rutaFichero = "src\\es\\florida\\cuaderno03\\Ejercicio07\\Carrera_caracoles\\campeon.txt";
+	
 	double distancia = 1;
 	String nombre;
 	double velocidad;
-	static String rutaFichero = "src\\es\\florida\\cuaderno03\\Ejercicio07\\Carrera_caracoles\\campeon.txt";
 	
 	public Caracol(String nombre, double velocidad) {
 		this.nombre = nombre;
 		this.velocidad = velocidad;
 	}
 
-	
 	
 	public static void main(String[] args) {
 		
@@ -30,17 +30,16 @@ public class Caracol implements Runnable{
 		
 		int caracoles = 5;
 		Caracol caracol;
-		double[] velocidad = {0.012, 0.011, 0.0099, 0.00999, 0.0105};
+		double[] velocidad = {0.012, 0.015, 0.0099, 0.00999, 0.0105};
 		
-		for (int i = 1; i<=caracoles; i++) {
-			caracol = new Caracol (("Caracol_" + i), velocidad[i-1]);
+		for (int i = 1; i <= caracoles; i++) {
+			caracol = new Caracol(("Caracol_" + i), velocidad[i - 1]);
 			Thread hilo = new Thread(caracol);
 			hilo.start();
 		}
 
-		boolean existe = false;
 		FileReader fr;
-		while (!existe) {
+		while (!f.exists()) {
 			try {
 				fr = new FileReader(f);
 				BufferedReader br = new BufferedReader(fr);
@@ -48,7 +47,6 @@ public class Caracol implements Runnable{
 				System.err.println(nombre + " ¡¡HA GANADO LA CARRERA!!" );
 				br.close();
 				fr.close();
-				existe = true;
 			} catch (IOException e) {
 				//e.printStackTrace();
 			}

@@ -15,10 +15,12 @@ public class KFC implements Runnable{
 	static int alitasConsumidas = 0;
 	
 	public static void main(String[] args) {
+		
 		KFC kfc = new KFC();
+		int companyeros = 30;
 		Thread t;
 
-		for (int i = 0; i < 30; i++) {
+		for (int i = 0; i < companyeros; i++) {
 			t = new Thread(kfc);
 			t.setName("Compañero_" + (i + 1));
 			t.start();
