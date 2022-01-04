@@ -24,7 +24,7 @@ public class ServidorCalculo{
 			ServidorCalculo_Hilo sc = new ServidorCalculo_Hilo(conexion);
 			Thread hilo = new Thread (sc);
 			hilo.start();
-				
+			
 		}	
 	}
 	

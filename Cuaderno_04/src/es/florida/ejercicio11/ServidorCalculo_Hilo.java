@@ -13,26 +13,30 @@ public class ServidorCalculo_Hilo implements Runnable{
 	BufferedReader br;
 	PrintWriter pw;
 	Socket socket;
-	
-	
-	public ServidorCalculo_Hilo (Socket socket) {
+
+	public ServidorCalculo_Hilo(Socket socket) {
 		this.socket = socket;
 	}
+
 	
-public static double calcular(String op, String n1, String n2) {
-		
+	public static double calcular(String op, String n1, String n2) {
+
 		double resultado = 0;
 		char simbolo = op.charAt(0);
 		double num1 = Double.parseDouble(n1);
 		double num2 = Double.parseDouble(n2);
-		if (simbolo == '+') resultado = num1 + num2;
-		if (simbolo == '-') resultado = num1 - num2;
-		if (simbolo == '*') resultado = num1 * num2;
-		if (simbolo == '/') resultado = num1 / num2;
-		
+		if (simbolo == '+')
+			resultado = num1 + num2;
+		if (simbolo == '-')
+			resultado = num1 - num2;
+		if (simbolo == '*')
+			resultado = num1 * num2;
+		if (simbolo == '/')
+			resultado = num1 / num2;
+
 		return resultado;
 	}
-	
+
 	@Override
 	public void run() {
 
@@ -45,7 +49,8 @@ public static double calcular(String op, String n1, String n2) {
 			OutputStream os = socket.getOutputStream();
 			pw = new PrintWriter(os);
 
-			System.err.println("SERVIDOR Hilo " + Thread.currentThread().getName() + " >>> Lee datos para la operación");
+			System.err
+					.println("SERVIDOR Hilo " + Thread.currentThread().getName() + " >>> Lee datos para la operación");
 			String nomCliente = br.readLine();
 			String signo = br.readLine();
 			String num1 = br.readLine();
