@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import org.json.*;
 
+import com.google.gson.Gson;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
@@ -73,6 +73,31 @@ public class GestorHTTP implements HttpHandler { // implementamos la interfaz
 		outputStream.flush();
 		outputStream.close();
 		System.out.println("Devuelve respuesta HTML: " + htmlResponse);
+		
+		String getJsonPost = requestParamValue;
+		convertJasonToJavaObj(getJsonPost);
 	}
-
+	
+	private void convertJasonToJavaObj(String json) {
+		Gson gson = new Gson();
+		carDetails user = gson.fromJson(json, carDetails.class);
+		System.out.println(user.toString());
+	}
+	
+	class carDetails{
+		
+		private String marca;
+		private String modelo;
+		private String cilindrada;
+		private String color;
+		
+		public String toString() {
+			String info = "\nMarca: " + marca + "\nModelo: " + modelo + "\nCilindrada: " + cilindrada + "\nColor: " + color;
+			return info;
+		}
+	}
 }
+
+
+
+
